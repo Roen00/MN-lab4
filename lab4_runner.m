@@ -1,21 +1,24 @@
 clc; clear all;
 
-%modul bledu!
-%wartosc dokladna
-d = -sqrt(2)*log((9 - 4*sqrt(2))/7);
-
-
-nVector = arrayfun(@(n) 2.^n, 3:10);
-
-b = 0.5;
-a = -0.5;
-f = @(x) 2/(2-x^2);
-
-pResult = arrayfun(@(n) P(b, a, n, f), nVector);
-tResult = arrayfun(@(n) T(b, a, n, f), nVector);
-sResult = arrayfun(@(n) S(b, a, n, f), nVector);
-calculateError = @(result) abs(d-result);
-
-pError = arrayfun(calculateError, pResult)
-tError = arrayfun(calculateError, tResult)
-sError = arrayfun(calculateError, sResult)
+integral(1,
+  0.5,
+  -0.5,
+  @(x) 2/(2-x^2),
+  -sqrt(2)*log((9 - 4*sqrt(2))/7)
+  )
+  
+  
+integral(2,
+  1,
+  -1,
+  @(x) 1/(sqrt(x*x+0.0001)),
+  2 * log(sqrt(10001) + 100)
+  )
+  
+  
+integral(3,
+  2*pi,
+  pi,
+  @(x) x*sin(30*x)*cos(x),
+  -(90*pi) / 899
+  )

@@ -1,0 +1,14 @@
+
+\int_{-0.5}^{0.5} \frac{2}{2-x^2} dx
+
+-\sqrt{2}ln(\frac{9-4\sqrt{2}}{7})
+
+
+
+\int_{-1}^{1}\frac{1}{\sqrt{x^2+0.0001}}dx
+
+2ln(\sqrt{10001}+100))
+
+
+\int_{\pi }^{2\pi}xsin30xcosxdx
+-\frac{90\pi}{899}
